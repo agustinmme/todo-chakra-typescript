@@ -73,7 +73,7 @@ const TaskForm: React.FC<Props> = ({ newAddTask }) => {
             name="title"
             label={"Title"}
             chakraComp={Input}
-            placeholder="Los 10 mosqueteros"
+            placeholder="Artificial Intelligence"
             type="title"
           />
 
@@ -81,7 +81,7 @@ const TaskForm: React.FC<Props> = ({ newAddTask }) => {
             name="description"
             label={"Description"}
             chakraComp={Textarea}
-            placeholder="Soy una descripcion"
+            placeholder="How It Can Potentially Help or Destroy Humanity"
             type="description"
           />
 
