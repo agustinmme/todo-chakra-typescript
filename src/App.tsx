@@ -1,4 +1,13 @@
-import { Box, Container, Heading, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  HStack,
+  Spacer,
+  Stack,
+  Image
+} from "@chakra-ui/react";
 import { useState } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
@@ -35,7 +44,16 @@ const App: React.FC<Props> = ({ title }) => {
       padding={4}
     >
       <Stack mt={10} spacing={4} align="stretch">
-        <Heading>{title}</Heading>
+        <Flex>
+          <Heading>{title}</Heading>
+          <Spacer />
+          <HStack>
+            <Image h={10} src={"https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"} alt={"Typescript"} />
+            <Image h={10} src={"https://avatars.githubusercontent.com/u/54212428?s=200&v=4"} alt={"Chakra-ui"}/>
+            <Image h={10} src={"https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"} alt={"React"}/>
+          </HStack>
+        </Flex>
+
         <TaskForm newAddTask={newAddTask} />
         <TaskList
           tasks={tasks}
